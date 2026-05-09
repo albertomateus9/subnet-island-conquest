@@ -1,78 +1,39 @@
-# Subnet Island Conquest
+# Conquista das Ilhas de Sub-redes
 
-CIDR and VLSM classroom game where teams conquer islands by allocating safe network ranges and VLANs.
+Jogo de sub-redes em que equipes conquistam ilhas ao distribuir faixas IP, VLANs e rotas sem sobreposição.
 
-> Educational project inspired by EETEPA Vilhena Alves. It is not an official institutional system and does not use real student data.
+> Projeto educacional inspirado na EETEPA Vilhena Alves. Não é sistema oficial institucional e não usa dados reais de estudantes.
 
-## Overview
+## Visão Geral
 
-**Code:** L-03  
-**Discipline focus:** Networks, Logic, and Infrastructure Planning  
-**Format:** Teacher-led classroom web game  
-**Suggested duration:** 25 to 35 minutes  
-**Public demo:** https://albertomateus9.github.io/subnet-island-conquest/
-
-This project turns a technical lesson into a guided mission. The teacher creates fictional teams, starts a timer, reveals mission phases, scores evidence and exports a classroom report.
-
-## Classroom Flow
-
-- **Claim The Base Island:** Choose a CIDR block that supports 30 hosts without wasting too much space.
-- **Build The VLAN Bridges:** Assign a VLAN and network range to each island without overlap.
-- **Open The Safe Route:** Find the overlap and propose a corrected subnet.
-
-## Competencies
-
-- IP planning
-- logical reasoning
-- capacity estimation
-- network documentation
-
-## Run Locally
-
-Open `index.html` directly or serve the folder:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Data Policy
-
-- Uses synthetic missions and fictional teams only.
-- Stores state only in browser `localStorage`.
-- Has no login, backend, external API or real student record.
-
----
-
-# Subnet Island Conquest
-
-CIDR and VLSM classroom game where teams conquer islands by allocating safe network ranges and VLANs.
-
-> Projeto educacional inspirado na EETEPA Vilhena Alves. Nao e sistema oficial institucional e nao usa dados reais de estudantes.
-
-## Visao Geral
-
-**Codigo:** L-03  
-**Foco disciplinar:** Redes, Logica e Planejamento de Infraestrutura  
+**Código:** L-03  
+**Foco disciplinar:** Redes, Lógica e Planejamento de Infraestrutura  
 **Formato:** jogo web conduzido pelo professor  
 **Tempo sugerido:** 25 a 35 minutos  
-**Demo publica:** https://albertomateus9.github.io/subnet-island-conquest/
+**Demonstração pública:** https://albertomateus9.github.io/subnet-island-conquest/
 
-Este projeto transforma uma aula tecnica em uma missao guiada. O professor cria equipes ficticias, inicia cronometro, revela fases, pontua evidencias e exporta um relatorio da aula.
+Este projeto transforma uma aula técnica em uma missão guiada. O professor cria equipes fictícias, inicia o cronômetro, revela fases, pontua evidências e exporta relatório da aula.
 
-## Dinamica De Aula
+## Roteiro Do Professor
 
-- **Claim The Base Island:** Choose a CIDR block that supports 30 hosts without wasting too much space.
-- **Build The VLAN Bridges:** Assign a VLAN and network range to each island without overlap.
-- **Open The Safe Route:** Find the overlap and propose a corrected subnet.
+- **Objetivo:** Treinar endereçamento IP como uma disputa por territórios bem planejados.
+- **Preparação:** Mostre um exemplo simples de CIDR e combine que sobreposição perde pontos.
+- **Condução:** Peça que cada equipe defenda sua escolha de faixa antes de avançar.
+- **Fechamento:** Compare desperdício, capacidade e organização das tabelas propostas.
+- **Critérios:** use a rubrica do app para pontuar evidência, colaboração, comunicação e melhoria.
 
-## Competencias
+## Missões
 
-- IP planning
-- logical reasoning
-- capacity estimation
-- network documentation
+- **Conquistar a Ilha Base (7 min):** Escolher um bloco CIDR que suporte 30 hosts sem desperdiçar espaço demais. Evidência: Escolha CIDR e quantidade de hosts utilizáveis.
+- **Construir Pontes VLAN (8 min):** Atribuir VLAN e faixa de rede para cada ilha sem sobreposição. Evidência: Tabela de VLANs.
+- **Abrir a Rota Segura (9 min):** Encontrar a sobreposição e propor uma sub-rede corrigida. Evidência: Tabela de planejamento IP corrigida.
+
+## Competências
+
+- planejamento IP
+- raciocínio lógico
+- estimativa de capacidade
+- documentação de rede
 
 ## Como Rodar
 
@@ -84,12 +45,12 @@ python -m http.server 8000
 
 Depois abra `http://localhost:8000`.
 
-## Politica De Dados
+## Política De Dados
 
-- Usa apenas missoes sinteticas e equipes ficticias.
+- Usa apenas missões sintéticas e equipes fictícias.
 - Guarda estado apenas no `localStorage` do navegador.
-- Nao possui login, backend, API externa ou registro real de estudante.
+- Não possui login, servidor, API externa ou registro real de estudante.
 
-## License
+## Licença
 
-MIT. See [LICENSE](LICENSE).
+MIT. Consulte [LICENSE](LICENSE).

@@ -1,37 +1,41 @@
 {
   "code": "L-03",
-  "title": "Subnet Island Conquest",
-  "notice": "Educational project inspired by EETEPA Vilhena Alves. It is not an official institutional system and does not use real student data.",
+  "title": "Conquista das Ilhas de Sub-redes",
+  "notice": "Projeto educacional inspirado na EETEPA Vilhena Alves. Não é sistema oficial institucional e não usa dados reais de estudantes.",
+  "dataPolicy": "Sem login, sem servidor, sem APIs externas e com dados salvos apenas no localStorage do navegador.",
   "missions": [
     {
       "id": "base",
-      "title": "Claim The Base Island",
+      "title": "Conquistar a Ilha Base",
       "duration": 7,
       "points": 10,
-      "story": "The school needs a base network for administration and lab services.",
-      "challenge": "Choose a CIDR block that supports 30 hosts without wasting too much space.",
-      "hint": "Count usable hosts, then choose the smallest safe block.",
-      "deliverable": "CIDR choice and usable host count."
+      "story": "A escola precisa de uma rede base para administração e serviços do laboratório.",
+      "challenge": "Escolher um bloco CIDR que suporte 30 hosts sem desperdiçar espaço demais.",
+      "hint": "Conte hosts utilizáveis e escolha o menor bloco seguro.",
+      "deliverable": "Escolha CIDR e quantidade de hosts utilizáveis.",
+      "criterion": "Pontue cálculo correto e justificativa do tamanho escolhido."
     },
     {
       "id": "vlans",
-      "title": "Build The VLAN Bridges",
+      "title": "Construir Pontes VLAN",
       "duration": 8,
       "points": 15,
-      "story": "Three islands need separation: students, teachers, and guests.",
-      "challenge": "Assign a VLAN and network range to each island without overlap.",
-      "hint": "Separate purpose first, then calculate ranges.",
-      "deliverable": "VLAN table."
+      "story": "Três ilhas precisam de separação: estudantes, professores e visitantes.",
+      "challenge": "Atribuir VLAN e faixa de rede para cada ilha sem sobreposição.",
+      "hint": "Separe primeiro por finalidade, depois calcule as faixas.",
+      "deliverable": "Tabela de VLANs.",
+      "criterion": "Pontue separação lógica, ausência de conflito e documentação clara."
     },
     {
-      "id": "route",
-      "title": "Open The Safe Route",
+      "id": "rota",
+      "title": "Abrir a Rota Segura",
       "duration": 9,
       "points": 20,
-      "story": "A route is blocked because two islands have overlapping ranges.",
-      "challenge": "Find the overlap and propose a corrected subnet.",
-      "hint": "Compare network ID and final usable range boundaries.",
-      "deliverable": "Corrected IP planning table."
+      "story": "Uma rota está bloqueada porque duas ilhas usam faixas conflitantes.",
+      "challenge": "Encontrar a sobreposição e propor uma sub-rede corrigida.",
+      "hint": "Compare ID da rede e limite final de hosts utilizáveis.",
+      "deliverable": "Tabela de planejamento IP corrigida.",
+      "criterion": "Pontue identificação do conflito e correção sem criar novo conflito."
     }
   ]
 }
