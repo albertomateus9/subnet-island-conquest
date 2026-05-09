@@ -1,0 +1,37 @@
+{
+  "code": "L-03",
+  "title": "Subnet Island Conquest",
+  "notice": "Educational project inspired by EETEPA Vilhena Alves. It is not an official institutional system and does not use real student data.",
+  "missions": [
+    {
+      "id": "base",
+      "title": "Claim The Base Island",
+      "duration": 7,
+      "points": 10,
+      "story": "The school needs a base network for administration and lab services.",
+      "challenge": "Choose a CIDR block that supports 30 hosts without wasting too much space.",
+      "hint": "Count usable hosts, then choose the smallest safe block.",
+      "deliverable": "CIDR choice and usable host count."
+    },
+    {
+      "id": "vlans",
+      "title": "Build The VLAN Bridges",
+      "duration": 8,
+      "points": 15,
+      "story": "Three islands need separation: students, teachers, and guests.",
+      "challenge": "Assign a VLAN and network range to each island without overlap.",
+      "hint": "Separate purpose first, then calculate ranges.",
+      "deliverable": "VLAN table."
+    },
+    {
+      "id": "route",
+      "title": "Open The Safe Route",
+      "duration": 9,
+      "points": 20,
+      "story": "A route is blocked because two islands have overlapping ranges.",
+      "challenge": "Find the overlap and propose a corrected subnet.",
+      "hint": "Compare network ID and final usable range boundaries.",
+      "deliverable": "Corrected IP planning table."
+    }
+  ]
+}
