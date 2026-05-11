@@ -7,13 +7,14 @@
   <meta name="description" content="Jogo de sub-redes em que equipes conquistam ilhas ao distribuir faixas IP, VLANs e rotas sem sobreposição.">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="game game-islands layout-map">
   <header class="app-header">
     <div class="brand">
       <span class="brand-mark">L-03</span>
       <div>
         <h1>Conquista das Ilhas de Sub-redes</h1>
         <p>Conquiste ilhas planejando CIDR, VLSM, VLANs e faixas de hosts.</p>
+        <p class="fantasy-line">Arquipélago de redes onde cada ilha precisa de faixa IP, VLAN e rota sem conflito.</p>
       </div>
     </div>
     <nav aria-label="Atalhos do professor">
@@ -27,15 +28,24 @@
     <section class="stage" id="missao">
       <div class="stage-toolbar">
         <div>
-          <span class="status-pill">Missão conduzida pelo professor</span>
+          <span class="status-pill">Mapa de conquista</span>
           <h2 id="phaseTitle">Carregando missão</h2>
+          <p class="verb-line">Ação da turma: <strong>conquistar ilhas</strong></p>
         </div>
         <div class="timer" aria-live="polite">
           <span id="timerValue">00:00</span>
           <small id="timerLabel">pronto</small>
         </div>
       </div>
-      <canvas id="gameCanvas" width="960" height="540" aria-label="Mapa visual da missão"></canvas>
+      <div class="arena-frame">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Mapa visual da missão"></canvas>
+        <div class="hud-strip" aria-label="HUD da missão">
+          <span>Ilha selecionada</span>
+          <span>Risco de sobreposição</span>
+          <span>Ilhas conquistadas</span>
+        </div>
+        <div id="phaseRail" class="phase-rail"></div>
+      </div>
       <div class="mission-card">
         <p id="phaseStory"></p>
         <h3>Desafio</h3>
@@ -46,6 +56,11 @@
         </details>
         <p class="deliverable"><strong>Evidência esperada:</strong> <span id="phaseDeliverable"></span></p>
         <p class="criterion"><strong>Critério de pontuação:</strong> <span id="phaseCriterion"></span></p>
+      </div>
+      <div class="mechanic-panel">
+        <strong>Mecânica da rodada</strong>
+        <p>A equipe conquista uma ilha quando defende um bloco CIDR/VLSM sem sobrepor outras faixas.</p>
+        <span>Ilha conquistada</span>
       </div>
       <div class="controls">
         <button id="prevPhase" type="button">Fase anterior</button>

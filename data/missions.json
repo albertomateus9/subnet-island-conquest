@@ -1,6 +1,15 @@
 {
   "code": "L-03",
   "title": "Conquista das Ilhas de Sub-redes",
+  "fantasy": "Arquipélago de redes onde cada ilha precisa de faixa IP, VLAN e rota sem conflito.",
+  "playerVerb": "conquistar ilhas",
+  "mechanic": {
+    "title": "Mecânica da rodada",
+    "prompt": "A equipe conquista uma ilha quando defende um bloco CIDR/VLSM sem sobrepor outras faixas.",
+    "reward": "Ilha conquistada"
+  },
+  "teacherPrompt": "Peça que as equipes levantem bandeiras somente depois de calcular faixa, hosts e separação lógica.",
+  "rewardLabel": "Ilhas conquistadas",
   "notice": "Projeto educacional inspirado na EETEPA Vilhena Alves. Não é sistema oficial institucional e não usa dados reais de estudantes.",
   "dataPolicy": "Sem login, sem servidor, sem APIs externas e com dados salvos apenas no localStorage do navegador.",
   "missions": [
